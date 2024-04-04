@@ -1,0 +1,214 @@
+
+ubuntu terminal commands and changes.....
+>>>>>......
+>>>>>..........
+>>>>>>>.............
+
+(base) user@nmst-1402:~$ touch file1 file2
+(base) user@nmst-1402:~$ whoami
+user
+(base) user@nmst-1402:~$ id
+uid=1000(user) gid=1000(user) groups=1000(user),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),132(lxd),133(sambashare)
+(base) user@nmst-1402:~$ groups
+user adm cdrom sudo dip plugdev lpadmin lxd sambashare
+(base) user@nmst-1402:~$ passwd
+Changing password for user.
+Current password: 
+passwd: Authentication token manipulation error
+passwd: password unchanged
+(base) user@nmst-1402:~$ who
+user     :0           2024-03-29 10:54 (:0)
+(base) user@nmst-1402:~$ last
+user     :0           :0               Fri Mar 29 10:54   still logged in
+reboot   system boot  5.15.0-97-generi Fri Mar 29 10:51   still running
+user     :0           :0               Fri Mar 29 10:32 - down   (00:04)
+reboot   system boot  5.15.0-97-generi Fri Mar 29 10:32 - 10:37  (00:04)
+user     :0           :0               Thu Mar 28 23:38 - down   (00:19)
+reboot   system boot  5.15.0-97-generi Thu Mar 28 23:38 - 23:58  (00:19)
+user     :0           :0               Thu Mar 28 22:59 - crash  (00:38)
+reboot   system boot  5.15.0-97-generi Thu Mar 28 22:59 - 23:58  (00:58)
+user     :0           :0               Thu Mar 28 18:30 - down   (00:01)
+reboot   system boot  5.15.0-97-generi Thu Mar 28 18:30 - 18:31  (00:01)
+user     :0           :0               Thu Mar 28 18:23 - down   (00:07)
+reboot   system 
+reboot   system boot  5.15.0-87-generi Thu Oct 26 10:33 - 14:15  (03:42)
+user     :0           :0               Tue Oct 24 19:56 - down   (01:24)
+reboot   system boot  5.15.0-87-generi Tue Oct 24 19:56 - 21:21  (01:24)
+user     :0           :0               Tue Oct 24 19:41 - down   (00:04)
+reboot   system boot  5.15.0-87-generi Tue Oct 24 19:41 - 19:45  (00:04)
+
+wtmp begins Tue Oct 24 19:40:08 2023
+(base) user@nmst-1402:~$ nslookup google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.183.206
+Name:	google.com
+Address: 2404:6800:4009:832::200e
+
+(base) user@nmst-1402:~$ nslookup rgukt.ac.in
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	rgukt.ac.in
+Address: 216.239.38.21
+Name:	rgukt.ac.in
+Address: 216.239.32.21
+Name:	rgukt.ac.in
+Address: 216.239.34.21
+Name:	rgukt.ac.in
+Address: 216.239.36.21
+Name:	rgukt.ac.in
+Address: 2001:4860:4802:36::15
+Name:	rgukt.ac.in
+Address: 2001:4860:4802:38::15
+Name:	rgukt.ac.in
+Address: 2001:4860:4802:32::15
+Name:	rgukt.ac.in
+Address: 2001:4860:4802:34::15
+
+(base) user@nmst-1402:~$ cp
+cp: missing file operand
+Try 'cp --help' for more information.
+(base) user@nmst-1402:~$ cp file1 file2
+(base) user@nmst-1402:~$ cat>file1
+tharun is a good boy
+rgukt student
+(base) user@nmst-1402:~$ cat> file2
+balaji is a good boy
+rgukt student
+cse hacker
+(base) user@nmst-1402:~$ cat file1
+tharun is a good boy
+rgukt student
+(base) user@nmst-1402:~$ cat file2
+balaji is a good boy
+rgukt student
+cse hacker
+(base) user@nmst-1402:~$ cat file1 file2
+tharun is a good boy
+rgukt student
+balaji is a good boy
+rgukt student
+cse hacker
+(base) user@nmst-1402:~$ cp file1 file2
+(base) user@nmst-1402:~$ cat file1
+tharun is a good boy
+rgukt student
+(base) user@nmst-1402:~$ cp  file2
+cp: missing destination file operand after 'file2'
+Try 'cp --help' for more information.
+(base) user@nmst-1402:~$ cat  file2
+tharun is a good boy
+rgukt student
+(base) user@nmst-1402:~$ cat  file1
+tharun is a good boy
+rgukt student
+(base) user@nmst-1402:~$ rm file2
+(base) user@nmst-1402:~$ cat file2
+cat: file2: No such file or directory
+(base) user@nmst-1402:~$ cat> file2
+balaji is a good boy
+cse student
+(base) user@nmst-1402:~$ mv file2 file1
+(base) user@nmst-1402:~$ cat file1
+balaji is a good boy
+cse student
+(base) user@nmst-1402:~$ cat file2
+cat: file2: No such file or directory
+(base) user@nmst-1402:~$ echo "student"
+student
+(base) user@nmst-1402:~$ chown file1 file2
+chown: invalid user: ‘file1’
+(base) user@nmst-1402:~$ chown file file2
+chown: invalid user: ‘file’
+(base) user@nmst-1402:~$ cd
+(base) user@nmst-1402:~$ pwd /Home
+/home/user
+
+				
+//commands all referenced.... below commands
+
+
+touch file1 file2
+ 1961  whoami
+ 1962  id
+ 1963  groups
+ 1964  passwd
+ 1965  who
+ 1966  last
+ 1967  nslookup google.com
+ 1968  nslookup rgukt.ac.in
+ 1969  cp
+ 1970  cp file1 file2
+ 1971  cat>file1
+ 1972  cat> file2
+ 1973  cat file1
+ 1974  cat file2
+ 1975  cat file1 file2
+ 1976  cp file1 file2
+ 1977  cat file1
+ 1978  cp  file2
+ 1979  cat  file2
+ 1980  cat  file1
+ 1981  rm file2
+ 1982  cat file2
+ 1983  cat> file2
+ 1984  mv file2 file1
+ 1985  cat file1
+ 1986  cat file2
+ 1987  echo "student"
+ 1988  chown file1 file2
+ 1989  chown file file2
+ 1990  cd
+ 1991  pwd /Home
+ 1992  cd ..
+ 1993  ls
+ 1994  mkdir folder1
+ 1995  ..
+ 1996  cd ..
+ 1997  clear
+ 1998  exit
+ 1999  telnet towel.blinkenlights.nl
+ 2000  mkdir forlder1
+ 2001  ls
+ 2002  rmdir folder1
+ 2003  rmdir forlder1
+ 2004  ps
+ 2005  ps ef
+ 2006  ps -ef
+ 2007  top
+ 2008  bg
+ 2009  xterm
+ 2010  bg
+ 2011  history
+ 2012  pwd 
+ 2013  ls
+ 2014  ls -alt
+ 2015  ls -l
+ 2016  ls -ltr
+ 2017  ls -a
+ 2018  which -a file2
+ 2019  which -a file1
+ 2020  which -a cat
+ 2021  man cat
+ 2022  su nmst_1402
+ 2023  su nmst1402
+ 2024  su nmst_1402 nmst-1402
+ 2025  sudo ls
+ 2026  sudo usr
+ 2027  sudo local
+ 2028  sudo protected
+ 2029  find /usr -type c -name backup
+ 2030  du
+ 2031  bg
+ 2032  cal
+ 2033  date
+ 2034  time
+ 2035  cal 11 2003
+ 2036  who
+ 2037  history
+(base) user@nmst-1402:~$ 

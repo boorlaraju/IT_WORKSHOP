@@ -1,0 +1,252 @@
+
+//All Week 2 referenced terminal commands....
+>>>......
+>>>>>.......
+>>>>>>>.........
+>>>>>>>>>>............
+
+
+touch file1 file2
+ 2001  cat> file1
+ 2002  cat> file2
+ 2003  cat file1 file2
+ 2004  cat> file1
+ 2005  cat file1 file2
+ 2006  grep "good" file2
+ 2007  grep "d" file2
+ 2008  grep -n"d" file2
+ 2009  grep -n "d" file2
+ 2010  grep -h "d" file2
+ 2011  grep -h "good" file2
+ 2012  grep -n "good" file2
+ 2013  grep -v "good" file2
+ 2014  grep -e "good" file2
+ 2015  grep -e "gd" file2
+ 2016  grep -e "g" file2
+ 2017  grep -e "g" -e "k"  file2
+ 2018  grep -o "good"  file2
+ 2019  grep -n -o "good"  file2
+ 2020  cat> month
+ 2021  sort month
+ 2022  cat> month
+ 2023  cat month
+ 2024  sort month
+ 2025  sort -M month
+ 2026  sort -n month
+ 2027  cat > num
+ 2028  sort num
+ 2029  sort -n num
+ 2030  sort -u num
+ 2031  cat> sedfile
+ 2032  sed 's/the/' sedfile
+ 2033  cat> sedfile.txt
+ 2034  sed 's/the/' sedfile.txt
+ 2035  sed '/the/' sedfile.txt
+ 2036  sed 'the' sedfile.txt
+ 2037  sed '/the/THE/' sedfile.txt
+ 2038  sed 's/linux/LINUX/' sedfile.txt
+ 2039  sed '/linux/LINUX/' sedfile.txt
+ 2040  sed '/linux/LINUX/s' sedfile.txt
+ 2041  sed '/linux/d' sedfile.txt
+ 2042  sed 's/linux/LINUX/' sedfile.txt
+ 2043  sed 's/ linux / LINUX /' sedfile.txt
+ 2044  history
+(base) user@nmst-1402:~$ 
+
+(base) user@nmst-1402:~$touch file1 file2
+(base) user@nmst-1402:~$ cat> file1
+tharun is a good boy
+rgukt student basar
+native from warangal 
+mahabubabad is a great district in telangana
+(base) user@nmst-1402:~$ cat> file2
+balaji is good boy 
+rgukt student in basar
+native hyderabad
+kakinada khaja is sweet
+(base) user@nmst-1402:~$ cat file1 file2
+tharun is a good boy
+rgukt student basar
+native from warangal
+mahabubabad is a great district in telangana
+balaji is good boy
+rgukt student in basar
+native hyderabad
+kakinada khaja is sweet
+(base) user@nmst-1402:~$ cat> file1
+end line 
+(base) user@nmst-1402:~$ cat file1 file2
+end line
+balaji is good boy
+rgukt student in basar
+native hyderabad
+kakinada khaja is sweet
+(base) user@nmst-1402:~$ grep "good" file2
+balaji is good boy
+(base) user@nmst-1402:~$ grep "d" file2
+balaji is good boy
+rgukt student in basar
+native hyderabad
+kakinada khaja is sweet
+(base) user@nmst-1402:~$ grep -n"d" file2
+grep: invalid argument ‘file2’ for ‘--directories’
+Valid arguments are:
+  - ‘read’
+  - ‘recurse’
+  - ‘skip’
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+(base) user@nmst-1402:~$ grep -n "d" file2
+1:balaji is good boy
+2:rgukt student in basar
+3:native hyderabad
+4:kakinada khaja is sweet
+(base) user@nmst-1402:~$ grep -h "d" file2
+balaji is good boy
+rgukt student in basar
+native hyderabad
+kakinada khaja is sweet
+(base) user@nmst-1402:~$ grep -h "good" file2
+balaji is good boy
+(base) user@nmst-1402:~$ grep -n "good" file2
+1:balaji is good boy
+(base) user@nmst-1402:~$ grep -v "good" file2
+rgukt student in basar
+native hyderabad
+kakinada khaja is sweet
+(base) user@nmst-1402:~$ grep -e "good" file2
+balaji is good boy
+(base) user@nmst-1402:~$ grep -e "gd" file2
+(base) user@nmst-1402:~$ grep -e "g" file2
+balaji is good boy
+rgukt student in basar
+(base) user@nmst-1402:~$ grep -e "g" -e "k"  file2
+balaji is good boy
+rgukt student in basar
+kakinada khaja is sweet
+(base) user@nmst-1402:~$ grep -o "good"  file2
+good
+(base) user@nmst-1402:~$ grep -n -o "good"  file2
+1:good
+(base) user@nmst-1402:~$ cat> month
+jan
+sept
+oct
+july
+aug
+dec
+feb
+may
+(base) user@nmst-1402:~$ sort month
+aug
+dec
+feb
+jan
+july
+may
+oct
+sept
+(base) user@nmst-1402:~$ cat> month
+jan
+sept
+oct
+july
+aug
+dec
+feb
+may
+feb
+may
+jan
+(base) user@nmst-1402:~$ cat month
+jan
+sept
+oct
+july
+aug
+dec
+feb
+may
+feb
+may
+jan
+(base) user@nmst-1402:~$ sort month
+aug
+dec
+feb
+feb
+jan
+jan
+july
+may
+may
+oct
+sept
+(base) user@nmst-1402:~$ sort -M month
+jan
+jan
+feb
+feb
+may
+may
+july
+aug
+sept
+oct
+dec
+(base) user@nmst-1402:~$ sort -n month
+aug
+dec
+feb
+feb
+jan
+jan
+july
+may
+may
+oct
+sept
+(base) user@nmst-1402:~$ cat > num
+1
+2 
+5
+65
+3$
+34356
+^[[17~
+44
+33
+57
+(base) user@nmst-1402:~$ sort num
+1
+
+2
+3$
+33
+34356
+44
+5
+57
+65
+(base) user@nmst-1402:~$ sort -n num
+
+1
+2
+3$
+5
+33
+44
+57
+65
+34356
+(base) user@nmst-1402:~$ sort -u num
+1
+
+2
+3$
+33
+34356
+44
+5
+57
+65
